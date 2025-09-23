@@ -8,24 +8,86 @@ for n in lista:
 '''    
 
 # 2. Dada a lista ["Python", "Java", "C++", "JavaScript"], remova o item "C++" e adicione "Ruby".
+'''
+# SOLUCAO 02
+lista: list = ["Python", "Java", "C++", "JavaScript"]
 
+lista.remove("C++")
+lista.append("Ruby")
 
+print(lista)
+'''
 
 # 3. Crie um dicionário para armazenar informações de um livro, incluindo título, autor e ano de publicação. Imprima cada informação.
+'''
+livro: dict = {"nome": "LivroABC", "autor":"Autor do ABC", "publicacao": 2000}
+# print(livro["nome"])
+# print(livro["autor"])
 
+for chave, valor in livro.items():
+    print(f"{chave} - {valor}")
+'''
 
 # 4. Escreva um programa que conta o número de ocorrências de cada caractere em uma string usando um dicionário.
+'''
+palavra: str = "paralelepipedo amarelo"
 
+def conta_letra(texto: str) -> dict:
+    conta = dict.fromkeys(['a', 'p', 'e'], 100)
+    for l in texto:
+        conta[l] = conta.get(l, 0) + 1
+    return conta
+
+contagem = conta_letra(palavra)
+
+print(contagem)
+'''
 
 # 5. Dada a lista ["maçã", "banana", "cereja"] e o dicionário {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}, calcule o preço total da lista de compras.
+'''
+lista_compras: list = ["maçã", "banana", "cereja"]
+precos: dict = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+tt: float = 0
+
+for f in lista_compras:
+    vlr: list = precos[f] 
+    tt = tt + precos[f]
+
+print(f"Valores = {vlr}")
+print(f"\nTotal = {tt}")
+
+# ## SOLUCAO JORNADA
+# lista_compras = ["maçã", "banana", "cereja"]
+# precos = {"maçã": 0.45, "banana": 0.30, "cereja": 0.65}
+# 
+# total = sum(precos[item] for item in lista_compras)
+# 
+# print(f"Preço total: {total}")
+'''
+
 # 6. Dada uma lista de emails, remova os duplicados e imprima a lista resultante.
-    #emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+##emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+
+emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
+
+for n in emails:
+    if emails.count(n) > 1:
+        emails.remove(n)
+
+print(emails)
+
 # 7. Crie um programa que solicite ao usuário uma frase e conte o número de palavras na frase.
     # idades = [22, 15, 30, 17, 18]
+
+
 # 8. Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
     # pessoas = [{"nome": "Ana", "idade": 25}, {"nome": "Carlos", "idade": 30}, {"nome": "Beatriz", "idade": 20}]
+
+
 # 9.  Dado um conjunto de números, calcular a média.
     # numeros = {10, 20, 30, 40, 50}
+
+
 # 10. Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
     # valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # 11. Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
