@@ -1,5 +1,7 @@
 # Desafio da Aula 03, incluindo
 # - Dicionario, Type Hint e Funções
+# DEVERA CRIAR UM PROGRAMA QUE CALCULARA O BONUS E SALVARA HISTORICO (DENTRO DE UM DICT)
+
 
 nome_valido: bool = False
 salario_valido: bool = False
