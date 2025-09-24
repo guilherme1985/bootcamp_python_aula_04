@@ -67,7 +67,7 @@ print(f"\nTotal = {tt}")
 
 # 6. Dada uma lista de emails, remova os duplicados e imprima a lista resultante.
 ##emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
-
+'''
 emails = ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"]
 
 for n in emails:
@@ -75,14 +75,43 @@ for n in emails:
         emails.remove(n)
 
 print(emails)
+'''
+# 7.A Crie um programa que solicite ao usuário uma frase e conte o número de palavras na frase.
+'''
+frase: str = input("Digite uma frase: ")
+palavras: list = frase.split()
 
-# 7. Crie um programa que solicite ao usuário uma frase e conte o número de palavras na frase.
+print(len(palavras))
+'''
+
+# 7.B Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
     # idades = [22, 15, 30, 17, 18]
+'''
+idades = [22, 15, 30, 17, 18]
+maiores = []
 
+for i in idades:
+    if i >= 18: 
+        maiores.append(i)
+
+print(maiores)
+
+
+## SOLUCAO JORNADA
+idades = [22, 15, 30, 17, 18]
+idades_validas = [idade for idade in idades if idade >= 18]
+
+print(idades_validas)
+'''
 
 # 8. Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
     # pessoas = [{"nome": "Ana", "idade": 25}, {"nome": "Carlos", "idade": 30}, {"nome": "Beatriz", "idade": 20}]
 
+pessoas = [{"nome": "Ana", "idade": 25}, {"nome": "Carlos", "idade": 30}, {"nome": "Beatriz", "idade": 20}]
+
+nomes = sorted(pessoas, key= lambda o: o["nome"])
+
+print(nomes)
 
 # 9.  Dado um conjunto de números, calcular a média.
     # numeros = {10, 20, 30, 40, 50}
