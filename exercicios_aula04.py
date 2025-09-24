@@ -106,24 +106,66 @@ print(idades_validas)
 
 # 8. Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
     # pessoas = [{"nome": "Ana", "idade": 25}, {"nome": "Carlos", "idade": 30}, {"nome": "Beatriz", "idade": 20}]
-
+'''
 pessoas = [{"nome": "Ana", "idade": 25}, {"nome": "Carlos", "idade": 30}, {"nome": "Beatriz", "idade": 20}]
 
 nomes = sorted(pessoas, key= lambda o: o["nome"])
 
 print(nomes)
+'''
 
 # 9.  Dado um conjunto de números, calcular a média.
     # numeros = {10, 20, 30, 40, 50}
+'''
+numeros = {10, 20, 30, 40, 50}
 
+tt = sum(numeros)
+media = tt / (len(numeros))
+
+print(media)
+'''
 
 # 10. Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
     # valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+'''
+valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+par = []
+impar = []
+
+for n in valores:
+    if n % 2:
+        impar.append(n)
+    else:
+        par.append(n)
+
+print(f"Par: {par} \nImpar: {impar}")
+'''
+
 # 11. Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
     # produtos = [{"id": 1, "nome": "Teclado", "preço": 100},    {"id": 2, "nome": "Mouse", "preço": 80}, {"id": 3, "nome": "Monitor", "preço": 300}]
+produtos = [{"id": 1, "nome": "Teclado", "preço": 100},    {"id": 2, "nome": "Mouse", "preço": 80}, {"id": 3, "nome": "Monitor", "preço": 300}]
+
+#nomes_produtos = [p["nome"] for p in produtos]
+print(produtos)
+
+id_prd = int(input("\nDigite um ID: "))
+vlr = int(input("Digite um novo valor: "))
+
+novos_preco = produtos.copy()
+
+for i in novos_preco:
+    if i["id"] == id_prd:
+        i["preço"] = vlr
+    
+
+print(f"\nNovos Preços: {novos_preco}")
+
+
 # 12. Dados dois dicionários, fundi-los em um único dicionário.
     # dicionario1 = {"a": 1, "b": 2}
     # dicionario2 = {"b": 3, "c": 4}
+
+
 # 13. Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
     # estoque = {"Teclado": 10, "Mouse": 0, "Monitor": 5, "CPU": 0}
 # 14. Dado um dicionário, criar listas separadas para suas chaves e valores.
