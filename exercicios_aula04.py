@@ -143,6 +143,7 @@ print(f"Par: {par} \nImpar: {impar}")
 
 # 11. Dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
     # produtos = [{"id": 1, "nome": "Teclado", "preço": 100},    {"id": 2, "nome": "Mouse", "preço": 80}, {"id": 3, "nome": "Monitor", "preço": 300}]
+"""
 produtos = [{"id": 1, "nome": "Teclado", "preço": 100},    {"id": 2, "nome": "Mouse", "preço": 80}, {"id": 3, "nome": "Monitor", "preço": 300}]
 
 #nomes_produtos = [p["nome"] for p in produtos]
@@ -159,15 +160,33 @@ for i in novos_preco:
     
 
 print(f"\nNovos Preços: {novos_preco}")
-
+"""
 
 # 12. Dados dois dicionários, fundi-los em um único dicionário.
     # dicionario1 = {"a": 1, "b": 2}
     # dicionario2 = {"b": 3, "c": 4}
+'''
+dicionario1 = {"a": 1, "b": 2}
+dicionario2 = {"b": 3, "c": 4}
 
+uniao = dicionario1 | dicionario2
+
+print(uniao)
+'''
 
 # 13. Dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
     # estoque = {"Teclado": 10, "Mouse": 0, "Monitor": 5, "CPU": 0}
+
+estoque = {"Teclado": 10, "Mouse": 0, "Monitor": 5, "CPU": 0}
+
+for i in list(estoque.keys()):
+    if estoque[i] <= 0:
+        estoque.pop(i, None)
+
+print(estoque)
+
+
+
 # 14. Dado um dicionário, criar listas separadas para suas chaves e valores.
     # dicionario = {"a": 1, "b": 2, "c": 3}
 # 15. Dada uma string, contar a frequência de cada caractere usando um dicionário.
